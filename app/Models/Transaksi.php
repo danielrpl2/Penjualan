@@ -12,7 +12,6 @@ class Transaksi extends Model
         'id_transaksi',
         'tgl_transaksi',
         'id_user',
-        'id_barang',
         'total_bayar',
         'bayar'
     ];

@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('detail_trxes', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_dit');
-            $table->integer('id_transaksi');
-            $table->integer('id_barang');
-            $table->integer('jml');
-            $table->integer('total');
+            $table->string('id_dit');
+            $table->string('id_transaksi');
+            $table->string('id_barang');
+            $table->string('jml');
+            $table->string('total');
             $table->timestamps();
         });
     }

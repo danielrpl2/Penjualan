@@ -13,7 +13,8 @@ class TransaksiController extends Controller
     {
         $gabung = DB::table('transaksis')
                 ->select('transaksis.*','barangs.nama_barang')        
-                ->join('barangs', 'barangs.id_barang', '=', 'transaksis.id_barang')
+                ->join('barangs', 'barangs.id_barang', '=', 'transaksis.id_transaksi')
+                ->join('detail_trxes', 'detail_trxes.id_barang', '=', 'transaksis.id_transaksi')
                 ->get();
         $barang = Barang::all();
 
@@ -26,7 +27,6 @@ class TransaksiController extends Controller
             'id_transaksi'=>$request ->id_transaksi,
             'tgl_transaksi'=>$request ->tgl_transaksi,
             'id_user'=>$request ->id_user,
-            'id_barang' =>$request->id_barang,
             'total_bayar'=>$request ->total_bayar,
             'bayar'=>$request ->bayar
 
@@ -66,7 +66,6 @@ class TransaksiController extends Controller
             'id_transaksi'=>$request ->id_transaksi,
             'tgl_transaksi'=>$request ->tgl_transaksi,
             'id_user'=>$request ->id_user,
-            'id_barang'=>$request ->id_barang,
             'total_bayar'=>$request ->total_bayar,
             'bayar'=>$request ->bayar
 

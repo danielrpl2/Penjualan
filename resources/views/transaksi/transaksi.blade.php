@@ -206,7 +206,6 @@
           <th scope="col">ID TRASAKSI</th>
           <th scope="col">TGL TRANSAKSI</th>
           <th scope="col">ID USER</th>
-          <th scope="col">ID BARANG</th>
           <th scope="col">TOTAL BAYAR</th>
           <th scope="col">BAYAR</th>
           <th scope="col">ACTION</th>

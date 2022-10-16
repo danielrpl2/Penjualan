@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('barangs', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_barang');
+            $table->string('id_barang');
             $table->string('nama_barang');
             $table->string('harga');
-            $table->integer('stok');
+            $table->string('stok');
            
             $table->timestamps();
         });
